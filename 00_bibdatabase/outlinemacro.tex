@@ -1,0 +1,24 @@
+\usepackage{ifthen,color,graphicx}
+
+%%% If draft is true, the numbered paragraphs show up %%%%%%%
+%%   If it is false, it disappears
+
+%\newboolean{draft}
+%\setboolean{draft}{true}
+%\setboolean{draft}{false}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\outlinestart}[1]
+{
+\ifthenelse{\boolean{#1}}{\begin{enumerate}}{}
+}
+
+\newcommand{\outline}[2]
+{
+\ifthenelse{\boolean{#1}}{\it \color {red} \item #2 \rm \color {black}}{}
+}
+
+\newcommand{\outlineend}[1]
+{
+\ifthenelse{\boolean{#1}}{\end{enumerate}}{}
+}

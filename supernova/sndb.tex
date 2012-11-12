@@ -1,0 +1,101 @@
+%\documentstyle[12pt,aaspp4]{article}
+%% How to compile this?
+%% do latex database.tex, bibtex database, latex, latex 
+
+%\documentstyle[12pt,aasms4,natbib]{article}
+%\documentclass[11pt,preprint]{aastex}
+\documentclass[12pt,preprint]{aastex}
+
+\pagestyle{myheadings}
+%\setlength{\textwidth}{7.5in}
+%\setlength{\textheight}{9.2in}
+%\setlength{\oddsidemargin}{-0.5in} % in addition to default 1 inch
+%\setlength{\evensidemargin}{-0.5in} % in addition to default 1 inch
+
+%\setlength{\textwidth}{6.5in}
+%\setlength{\textheight}{9.5in}
+%\setlength{\oddsidemargin}{-0.8in} % in addition to default 1 inch
+%\setlength{\evensidemargin}{-0.8in} % in addition to default 1 inch
+%\setlength{\topmargin}{-0.5in}    % in addition to default 1 inch
+
+% Basic Units
+\newcommand{\hmpc}{$h^{-1}$~Mpc}
+\newcommand{\hkpc}{$h^{-1}$~kpc}
+\newcommand{\kms}{km s$^{-1}$}
+\newcommand{\cmm}{cm$^{-2}$}
+\newcommand{\cmmm}{cm$^{-3}$}
+\def \fnuunit {erg cm$^{-2}$ s$^{-1}$ Hz$^{-1}$}
+\newcommand{\escsh}{$\mathrm{ergs}
+        \mathrm{\ s}^{-1}
+        \mathrm{\ cm}^{-2}
+        \mathrm{\ sr}^{-1}
+        \mathrm{\ Hz}^{-1}$}
+
+% Mathematics
+\newcommand{\chisquared}{$\chi^{2}$}
+
+% Cosmology Related
+\newcommand{\omegatotal}{$\Omega _{total}$}
+
+\newcommand{\om}{$\Omega _m$}
+\newcommand{\omegam}{$\Omega _m$}
+
+\newcommand{\ol}{$\Omega _{\Lambda}$}
+\newcommand{\omegal}{$\Omega _{\Lambda}$}
+\newcommand{\omegalambda}{$\Omega _{\Lambda}$}
+
+\newcommand{\omegabaryon}{$\Omega _b$}
+\newcommand{\obh}{$\Omega _bh^{2}$}
+\newcommand{\omegabaryonhsquared}{$\Omega _bh^{2}$}
+\newcommand{\hubbleconstant}{$H_{0}$}
+\newcommand{\lcdm}{$\Lambda$CDM}
+\newcommand{\ocdm}{OCDM}
+
+\newcommand{\pk} {$P(k)$}
+
+% Ly Alpha Forest Related
+\newcommand{\lya}{Ly$\alpha$}
+\newcommand{\lyb}{Ly$\beta$}
+\newcommand{\lyg}{Ly$\gamma$}
+\newcommand{\lyaf} {Lyman-$\alpha$ Forest}
+\newcommand{\nhi}{$N_{\rm H I}$}
+\newcommand{\zabs}{$z_{abs}$}
+\newcommand{\zem}{$z_{em}$}
+\newcommand{\da}{$D_A$}
+\newcommand{\fbar}{\mbox{$\bar{F}$}}
+
+% UV background related
+\newcommand{\jtwentyone} {$J_{21}$}
+\newcommand{\jzero}{$J_0$}
+\newcommand{\jnu}{$J_{912}$}
+\newcommand{\jovi}{$J_{197??}$}
+
+% Bibliography
+\newcommand{\etal}{{\it et al.}}
+
+\begin{document}
+\title{References}
+\author{Nao Suzuki}
+\begin{abstract}
+This is a summary of our research related papers.  ApJ styled reference
+is created for tex practice.  
+\end{abstract}
+
+\input{section_review}
+\input{section_eos}
+\input{section_progenitor}
+\input{section_dust}
+\input{section_hostgalaxy}
+\input{section_rates}
+\input{section_cepheid}
+\input{section_gravitational_lens}
+
+\input{section_ltcv}
+\input{section_snindiv}
+\input{section_scp}
+\input{section_basics}
+
+\bibliographystyle{../../../../papers/00_bibdatabase/apj}
+\bibliography{../../../../papers/00_bibdatabase/archive}
+
+\end{document}

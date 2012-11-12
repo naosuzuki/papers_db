@@ -1,0 +1,217 @@
+%\usepackage{color}
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage[dvips]{rotating}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xspace}
+\usepackage{natbib}
+\usepackage{ifthen}
+\usepackage{lscape}
+\usepackage[usenames]{color}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Supernova Cosmology
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\snIa}{SN~Ia}
+\newcommand{\sneIa}{SNe~Ia}
+\newcommand{\bmax}{B$_{\rm max}$}
+\newcommand{\sigsamp}{\sigma_{\mathrm{sample}}}
+
+% Lines
+\newcommand{\naI}{Na~I}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Supernova Cosmology Projects & Telescopes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\compname}{Union2\xspace}
+\newcommand{\ang}{\AA\xspace}
+%\newcommand{\etal}{et~al.\xspace}
+\newcommand{\scp}{SCP\xspace}
+\newcommand{\snls}{SNLS\xspace}
+\newcommand{\essence}{ESSENCE\xspace}
+\newcommand{\sn}{SN\xspace}
+\newcommand{\factory}{\sn-Factory\xspace}
+\newcommand{\sdsssn}{SDSS SN-search\xspace}
+\newcommand{\sdss}{SDSS\xspace}
+\newcommand{\rsdss}{r_\mathrm{\sdss}}
+\newcommand{\isdss}{i_\mathrm{\sdss}}
+\newcommand{\sne}{SNe\xspace}
+\newcommand{\snia}{SN~Ia\xspace}
+\newcommand{\sneia}{SNe~Ia\xspace}
+\newcommand{\salt}{SALT\xspace}
+\newcommand{\saltii}{SALT2\xspace}
+\newcommand{\sed}{SED\xspace}
+\newcommand{\sex}{\textsc{se}xtractor\xspace}
+\newcommand{\psf}{PSF\xspace}
+\newcommand{\hst}{HST\xspace}
+\newcommand{\wfpc}{WFPC2\xspace}
+\newcommand{\vlt}{VLT\xspace}
+\newcommand{\ntt}{NTT\xspace}
+\newcommand{\ctio}{CTIO\xspace}
+\newcommand{\cfht}{CFHT\xspace}
+\newcommand{\gemini}{Gemini\xspace}
+\newcommand{\subaru}{Subaru\xspace}
+\newcommand{\cisco}{CISCO\xspace}
+\newcommand{\focas}{FOCAS\xspace}
+\newcommand{\fors}{FORS1\xspace}
+\newcommand{\forstwo}{FORS2\xspace}
+\newcommand{\niri}{NIRI\xspace}
+\newcommand{\cfhk}{CFH12k\xspace}
+\newcommand{\susi}{SuSI2\xspace}
+\newcommand{\suprimecam}{SuprimeCam\xspace}
+\newcommand{\mosaic}{MOSAIC II\xspace}
+\newcommand{\isaac}{ISAAC\xspace}
+\newcommand{\pc}{PC\xspace}
+\newcommand{\acs}{ACS\xspace}
+\newcommand{\stsci}{STScI\xspace}
+\newcommand{\stsdas}{STSDAS\xspace}
+\newcommand{\crrej}{\texttt{crrej}\xspace}
+% Note latex does not allow to have character + numeric number
+% so the following commands do not work (Jan 30, 2009)
+%\newcommand{\z850}{$z_{\mathrm 850}$\xspace}
+%\newcommand{\i775}{$i_{\mathrm 775}$\xspace}
+\newcommand{\zacs}{$z_{\mathrm 850}$\xspace}
+\newcommand{\iacs}{$i_{\mathrm 775}$\xspace}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Lyman & Balmer series lines
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lyman Series
+\newcommand{\ly}{Lyman}
+\newcommand{\Lya}{\mbox{Ly$\alpha$}}
+\newcommand{\lya}{\mbox{Ly$\alpha$}}
+\newcommand{\lyb}{\mbox{Ly$\beta$}}
+\newcommand{\lyg}{\mbox{Ly$\gamma$}}
+
+% Balmar Series
+\newcommand{\halpha}{${\rm H}_{\alpha}$}
+\newcommand{\hbeta}{${\rm H}_{\beta}$}
+\newcommand{\hgamma}{${\rm H}_{\gamma}$}
+\newcommand{\hdelta}{${\rm H}_{\delta}$}
+\newcommand{\hepsilon}{${\rm H}_{\epsilon}$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Units
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\kms}{\mbox{km s$^{-1}$}}
+\newcommand{\cmm}{\mbox{cm$^{-2}$}}
+\newcommand{\cmmm}{\mbox{cm$^{-3}$}}
+\newcommand{\escsh}{$\mathrm{ergs}
+        \mathrm{\ s}^{-1}
+        \mathrm{\ cm}^{-2}
+        \mathrm{\ sr}^{-1}
+        \mathrm{\ Hz}^{-1}$}
+\newcommand{\hmpc}{\mbox{$h^{-1}$Mpc}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Light elements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\het}{\mbox{$^3$He}}
+\newcommand{\hef}{\mbox{$^4$He}}
+\newcommand{\lisv}{\mbox{$^7$Li}}
+\newcommand{\lisx}{\mbox{$^6$Li}}
+\newcommand{\yp}{\mbox{Y$_p$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cosmological  Parameters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ETA}{\mbox{$\eta $}}
+\newcommand{\ob}{\mbox{$\Omega_b$}}
+\newcommand{\obh}{\mbox{$\Omega_bh^{2}$}}
+\newcommand{\om}{\mbox{$\Omega_m$}}
+\newcommand{\omegam}{\mbox{$\Omega_m$}}
+\newcommand{\omegak}{\mbox{$\Omega_k$}}
+\newcommand{\omegal}{\mbox{$\Omega_{\Lambda}$}}
+%\newcommand{\ol}{\mbox{$\Omega_{\Lambda } $}}
+%\renewcommand{\ol}{\mbox{$\Omega_{\Lambda } $}}
+\newcommand{\sig}{\mbox{$\sigma_8$}}
+\newcommand{\gammahe}{\mbox{$\gamma_{228}$}}
+\newcommand{\gammah}{\mbox{$\gamma_{912}$}}
+\newcommand{\jnu}{\mbox{$J_{\nu }$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Parameters Measured 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\zabs}{\mbox{$z_{\rm abs}$}}
+\newcommand{\chisq}{\mbox{$\chi^2$}}
+\newcommand{\nhi}{\mbox{N$_{\rm H I}$}}
+\newcommand{\lnhi}{\mbox{log \nhi}}
+\newcommand{\ndi}{\mbox{N$_{\rm D I}$}}
+\newcommand{\lndi}{\mbox{log \ndi}}
+\newcommand{\bhi}{\mbox{$b_{\rm H I}$}}
+\newcommand{\zdh}{\mbox{$z = 2.526$}}
+\newcommand{\zdhvalue}{2.526}
+\newcommand{\da}{\mbox{$D_a$}}
+\newcommand{\fbar}{\mbox{$\bar{F}$}}
+\newcommand{\pdff}{\mbox{flux distribution}}
+\newcommand{\bsig}{\mbox{$b_{\sigma}$}}
+%\newcommand{\pl}{\mbox{$P_{-2}$}}
+\newcommand{\pmed}{\mbox{$P_{-1.5}$}}  
+\newcommand{\ps}{\mbox{$P_{-1}$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Misc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\etal}{{\it et al.}}
+\newcommand{\lyaf} {\lya\ forest}
+\newcommand{\mf}{\mbox{$10^{-5}$}}
+
+% followings are from Chris Lidman
+\newcommand{\ah}{^\mathrm{h}}
+\newcommand{\am}{^\mathrm{m}}
+\newcommand{\as}{^\mathrm{s}}
+\newcommand{\dd}{^\circ}
+\newcommand{\dm}{'}
+\newcommand{\ds}{''}
+\newcommand{\ie}{i.e.\xspace}
+\newcommand{\eg}{e.g.\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The following defines commands to leave messages in draft copies of the
+%% document.  The messages will only be visible if draftmode=true.  
+%% \documentclass[11pt,preprint]{aastex}
+%% \input{astronomy-commands}
+%% \draftmodeptrue  or \draftmodepfalse
+%% Note that
+%% I use plain old TeX if's instead of Latex's \ifthenelse because the TeX
+%% version can be imbedded into Latex commands (such as \section).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\ifdraftmodep
+\draftmodepfalse
+
+\newcommand{\NOTE}[1]{\ifdraftmodep {\color {red} [{\it #1}]} \fi}
+\newcommand{\DONE}[1]{\ifdraftmodep {\color {blue} [DONE: {\it #1}]} \fi}
+\newcommand{\RESP}[1]{\ifdraftmodep {\color {blue} {\it #1}} \fi}
+
+%\newcommand{\NB}[1]{\ifdraftmodep {\color {red} [NB: {\it #1}]} \fi}
+% Rahman Amanullah
+\newcommand{\RA}[1]{\ifdraftmodep {\color {blue} [RA: {\it #1}]} \fi}
+% Kyle Barbary
+\newcommand{\KB}[1]{\ifdraftmodep {\color {blue} [KB: {\it #1}]} \fi}
+% Kyle Dawson
+\newcommand{\KD}[1]{\ifdraftmodep {\color {blue} [KD: {\it #1}]} \fi}
+% Eric Hsiao
+\newcommand{\EH}[1]{\ifdraftmodep {\color {blue} [EH: {\it #1}]} \fi}
+% Chris Lidman
+\newcommand{\CL}[1]{\ifdraftmodep {\color {blue} [CL: {\it #1}]} \fi}
+% Josh Meyers
+\newcommand{\JM}[1]{\ifdraftmodep {\color {blue} [JM: {\it #1}]} \fi}
+% Saul Perlmutter
+\newcommand{\SP}[1]{\ifdraftmodep {\color {blue} [SP: {\it #1}]} \fi}
+% Pascal Ripoche
+\newcommand{\PR}[1]{\ifdraftmodep {\color {blue} [PR: {\it #1}]} \fi}
+% David Rubin
+\newcommand{\DR}[1]{\ifdraftmodep {\color {blue} [DR: {\it #1}]} \fi}
+% Tony Spadafora
+\newcommand{\ALS}[1]{\ifdraftmodep {\color {blue} [ALS: {\it #1}]} \fi}
+% Nao Suzuki
+\newcommand{\NS}[1]{\ifdraftmodep {\color {blue} [NS: {\it #1}]} \fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define a boolean to indicate if this should be set with emulateapj
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifapjp
+\apjpfalse
